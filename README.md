@@ -1,6 +1,6 @@
-# Perseus Swap Stream
+# Perseus NEAR Stream Bridge
 
-Use this dapp to allow your users to send or receive monthly crypto streams in any cryptocurrency available. Users can swap any coin in any chain for Daix to send a Superfluid Stream to another wallet that can swap the streamed Daix to any coin of their choosing.
+Use this dapp to allow your users to swap and bridge any token in any network for NEAR. Users can now swap any coins for NEAR and send a monthly crypto stream to a friend/employee wallet or defi contract. Users can then swap the monthly NEAR income to any coin of their choosing.
 
 ## Available Scripts
 
