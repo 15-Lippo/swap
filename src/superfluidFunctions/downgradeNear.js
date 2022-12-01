@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import { Button, Form, FormGroup, FormControl, Spinner, Container, Row, Col } from "react-bootstrap";
 
 //where the Superfluid logic takes place
-async function daiDowngrade(amt) {
+async function nearDowngrade(amt) {
   const provider = new ethers.providers.JsonRpcProvider(
       process.env.NODE_ENV_INFURA_URL,  //Your Infura NETWORK ENDPOINTS
       137
@@ -86,7 +86,7 @@ export default function DowngradeNEAR () {
               <DowngradeButton
                 onClick={() => {
                   setIsDowngradeButtonLoading(true);
-                  daiDowngrade(amount);
+                  nearDowngrade(amount);
                   setTimeout(() => {
                     setIsDowngradeButtonLoading(false);
                   }, 1000);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Framework } from "@superfluid-finance/sdk-core";
-import { ethers } from "ethers";
+import { ethers, BigNumber } from "ethers";
 import { Button, Form, FormGroup, FormControl, Spinner, Container, Row, Col } from "react-bootstrap";
 import { abi } from '../utils/SuperApp';
 
@@ -21,6 +21,9 @@ async function nearApprove(amt) {
     provider
   });
 
+  const gasPrice = ethers.utils.parseUnits('100', 'gwei');
+  const gasLimit = 250000;
+
   //fDAI on goerli: you can find network addresses here: https://docs.superfluid.finance/superfluid/developers/networks
   //note that this abi is the one found here: https://goerli.etherscan.io/address/0x88271d333C72e51516B67f5567c728E702b3eeE8
   const NEAR = new ethers.Contract(
@@ -32,7 +35,8 @@ async function nearApprove(amt) {
     console.log("approving NEAR spend");
     await NEAR.approve(
       "0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00",
-      ethers.utils.parseEther(amt.toString())
+      ethers.utils.parseEther(amt.toString()),
+      { gasPrice: gasPrice, gasLimit: gasLimit }
     ).then(function (tx) {
       console.log(
         `Congrats, you just approved your NEAR spend. You can see this tx at https://polygonscan.com/txs/${tx.hash}`
