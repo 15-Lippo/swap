@@ -12,7 +12,7 @@ const Withdraw = () => {
           <Navbar />
         </div>
        <div className="sfb__heather">
-         <h1 className="gradient__text">Exchange Near</h1>
+         <h1 className="gradient__text">Exchange Lisprocoin</h1>
        </div>
        <div className="sfb__swap">
         <WidgetSwap />
