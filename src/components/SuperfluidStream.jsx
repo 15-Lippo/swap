@@ -131,7 +131,7 @@ const SuperfluidStream = () => {
         <SwapWidget />
        </div>
        <div className="sfb__heather">
-         <h1 className="gradient__text">Stream Near</h1>
+         <h1 className="gradient__text">Stream Lisprocoin</h1>
        </div>
        <div>
        <CardGroup>
@@ -286,7 +286,7 @@ const SuperfluidStream = () => {
        </CardGroup>    
       </div>
       <div className="sfb__heather">
-        <h1 className="gradient__text">Exchange Near</h1>
+        <h1 className="gradient__text">Exchange Lisprocoin</h1>
       </div>
       <div className="sfb__swap">
         <WidgetSwap />
