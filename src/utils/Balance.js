@@ -10,14 +10,14 @@ export default async function Balance() {
 
     const config = {
       hostAddress: "0x3E14dC1b13c488a8d5D310918780c983bD5982E7",
-      cfaV1Address: "0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180",
+      cfaV1Address: "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F",
       idaV1Address: "0xD0355200111C2B21AAbC1a31552eCCDc5d4E905d"
     }
 
     const daix = await SuperToken.create({
-      address: "0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180",
+      address: "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F",
       config,
-      chainId: 56, // you can also pass in chainId instead (e.g. chainId: 137)
+      chainId: 137, // you can also pass in chainId instead (e.g. chainId: 137)
       provider
     })
 
