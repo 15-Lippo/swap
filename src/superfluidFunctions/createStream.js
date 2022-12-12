@@ -4,25 +4,25 @@ import { ethers } from "ethers";
 export default async function createNewFlow(recipient, flowRate) {
     const provider = new ethers.providers.JsonRpcProvider(
         process.env.NODE_ENV_INFURA_URL,  //Your Infura NETWORK ENDPOINTS
-        137
+        56
       );
 
     const signer = new ethers.Wallet(process.env.NODE_ENV_PRIVATE_KEY, provider);
 
     const chainId = await window.ethereum.request({ method: "eth_chainId" });
     const superfluid = await Framework.create({
-        chainId: 137,
+        chainId: 56,
         provider: provider,
     });
 
-    const NEARxContract = await superfluid.loadSuperToken("0x094Ed09F072596C34C5c0b197dcEB0da6b04C580");
-    const NEARx = NEARxContract.address;
+    const Lisprocoin contrac = await superfluid.loadSuperToken("");
+    const Lisprocoin = lisprocoin contract.address;
 
     try {
         const createFlowOperation = superfluid.cfaV1.createFlow({
             receiver: recipient,
             flowRate: flowRate,
-            superToken: NEARx,
+            superToken: Lisprocoin,
         });
 
         console.log("Creating your stream...");
@@ -32,9 +32,9 @@ export default async function createNewFlow(recipient, flowRate) {
         alert(
             `Congrats - you've just created a money stream!
             View Your Stream At: https://app.superfluid.finance/dashboard/${recipient}
-            Network: Polygon
-            Super Token: NEARx
-            Sender: 0x6EeE6060f715257b970700bc2656De21dEdF074C
+            Network: Binance
+            Super Token:Lisprocoin
+            Sender: 0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180
             Receiver: ${recipient},
             FlowRate: ${flowRate}
             `
