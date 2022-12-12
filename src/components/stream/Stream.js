@@ -46,7 +46,7 @@ const Stream = () => {
         console.log("chain ID:", chain);
 
         console.log(accounts[0]);
-        console.log('0x888D08001F91D0eEc2f16364779697462A9A713D');
+        console.log('0xD0355200111C2B21AAbC1a31552eCCDc5d4E905d');
 
         if (accounts.length > 0) {
             console.log("Found an authorized account: ", accounts[0]);
