@@ -15,7 +15,7 @@ export default async function Balance() {
     }
 
     const daix = await SuperToken.create({
-            address: "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8",
+            address: "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F",
       config,
       chainId: 137, // you can also pass in chainId instead (e.g. chainId: 137)
       provider
