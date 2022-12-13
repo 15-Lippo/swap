@@ -20,7 +20,7 @@ async function nearDowngrade(amt) {
   });
 
   const lisprocoin = await sf.loadSuperToken(
-    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8"
+    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F"
   );
 
   console.log(DAIx.address);
