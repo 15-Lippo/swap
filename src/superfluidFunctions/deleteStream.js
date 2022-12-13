@@ -35,7 +35,7 @@ export default async function deleteFlow(recipient) {
             `Congrats - you've just deleted your money stream!
             Network: Polygon
             Super Token: lisprocoin
-            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8
+            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
             Receiver: ${recipient}
             `
         );
