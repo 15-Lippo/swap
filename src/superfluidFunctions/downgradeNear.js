@@ -10,7 +10,7 @@ async function nearDowngrade(amt) {
       137
       );
   const sf = await Framework.create({
-    chainId: 56,
+    chainId: 137,
     provider
   });
 
@@ -20,7 +20,7 @@ async function nearDowngrade(amt) {
   });
 
   const lisprocoin = await sf.loadSuperToken(
-    "0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180"
+    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8"
   );
 
   console.log(DAIx.address);
