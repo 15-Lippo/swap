@@ -4,14 +4,14 @@ import { ethers } from "ethers";
 export default async function deleteFlow(recipient) {
     const provider = new ethers.providers.JsonRpcProvider(
         process.env.NODE_ENV_INFURA_URL,  //Your Infura NETWORK ENDPOINTS
-        56
+        137
       );
 
     const signer = new ethers.Wallet(process.env.NODE_ENV_PRIVATE_KEY, provider);
 
     const chainId = await window.ethereum.request({ method: "eth_chainId" });
     const superfluid = await Framework.create({
-        chainId: 56,
+        chainId: 137,
         provider: provider,
     });
 
@@ -33,9 +33,9 @@ export default async function deleteFlow(recipient) {
 
         console.log(
             `Congrats - you've just deleted your money stream!
-            Network: Binance
+            Network: Polygon
             Super Token: lisprocoin
-            Sender: 0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180
+            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8
             Receiver: ${recipient}
             `
         );
