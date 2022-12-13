@@ -4,18 +4,18 @@ import { ethers } from "ethers";
 export default async function updateExistingFlow(recipient, flowRate) {
     const provider = new ethers.providers.JsonRpcProvider(
         process.env.NODE_ENV_INFURA_URL,  //Your Infura NETWORK ENDPOINTS
-        56
+        137
       );
 
     const signer = new ethers.Wallet(process.env.NODE_ENV_PRIVATE_KEY, provider);
 
     const chainId = await window.ethereum.request({ method: "eth_chainId" });
     const superfluid = await Framework.create({
-        chainId: 56,
+        chainId: 137,
         provider: provider,
     });
 
-    const LisprocoinContract = await superfluid.loadSuperToken("0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180");
+    const LisprocoinContract = await superfluid.loadSuperToken("0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8");
     const Lisprocoin = LisprocoinContract.address;
 
     try {
