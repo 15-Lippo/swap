@@ -34,7 +34,7 @@ export default async function createNewFlow(recipient, flowRate) {
             View Your Stream At: https://app.superfluid.finance/dashboard/${recipient}
             Network: Polygon
             Super Token:Lisprocoin
-            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8
+            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
             Receiver: ${recipient},
             FlowRate: ${flowRate}
             `
