@@ -9,7 +9,7 @@ async function nearApprove(amt) {
     const contractABI = abi;
     const provider = new ethers.providers.JsonRpcProvider(
         process.env.NODE_ENV_INFURA_URL,  //Your Infura NETWORK ENDPOINTS
-        56
+        137
       );
     const sf = await Framework.create({
     chainId: 137,
@@ -25,9 +25,9 @@ async function nearApprove(amt) {
   const gasLimit = 250000;
 
   //fDAI on goerli: you can find network addresses here: https://docs.superfluid.finance/superfluid/developers/networks
-  //note that this abi is the one found here: https://goerli.etherscan.io/address/0x85578D91DAC3Fe97dd31206A9779654bE3ae9365
+  //note that this abi is the one found here: https://goerli.etherscan.io/address/ 0x85578d91dac3fe97dd31206a9779654be3ae9365
   const Lisprocoin = new ethers.Contract(
-    "0x85578D91DAC3Fe97dd31206A9779654bE3ae9365",
+    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8",
     contractABI,
     signer
   );
