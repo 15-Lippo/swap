@@ -15,8 +15,8 @@ export default async function deleteFlow(recipient) {
         provider: provider,
     });
 
-    const lisprocoinContract = await superfluid.loadSuperToken("0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F");
-    const lisprocoin = lisprocoinContract.address;
+    const NEARxContract = await superfluid.loadSuperToken("0x094Ed09F072596C34C5c0b197dcEB0da6b04C580");
+    const NEARx = NEARxContract.address;
 
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
 
@@ -34,8 +34,8 @@ export default async function deleteFlow(recipient) {
         console.log(
             `Congrats - you've just deleted your money stream!
             Network: Polygon
-            Super Token: lisprocoin
-            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
+            Super Token: NEARx
+            Sender: 0x6EeE6060f715257b970700bc2656De21dEdF074C
             Receiver: ${recipient}
             `
         );
