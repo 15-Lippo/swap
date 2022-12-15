@@ -15,7 +15,7 @@ export default async function deleteFlow(recipient) {
         provider: provider,
     });
 
-    const lisprocoinContract = await superfluid.loadSuperToken("0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180");
+    const lisprocoinContract = await superfluid.loadSuperToken("0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F");
     const lisprocoin = lisprocoinContract.address;
 
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
