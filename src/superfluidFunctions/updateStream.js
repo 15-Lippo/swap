@@ -15,14 +15,14 @@ export default async function updateExistingFlow(recipient, flowRate) {
         provider: provider,
     });
 
-    const LisprocoinContract = await superfluid.loadSuperToken("0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F");
-    const Lisprocoin = LisprocoinContract.address;
+    const NEARxContract = await superfluid.loadSuperToken("0x094Ed09F072596C34C5c0b197dcEB0da6b04C580");
+    const NEARx = NEARxContract.address;
 
     try {
         const updateFlowOperation = superfluid.cfaV1.updateFlow({
             receiver: recipient,
             flowRate: flowRate,
-            superToken: Lisprocoin,
+            superToken: NEARx,
         });
 
         console.log("Updating your stream...");
@@ -34,8 +34,8 @@ export default async function updateExistingFlow(recipient, flowRate) {
             `Congrats - you've just updated a money stream!
             View Your Stream At: https://app.superfluid.finance/dashboard/${recipient}
             Network: Kovan
-            Super Token: Lisprocoin
-            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
+            Super Token: NEARx
+            Sender: 0x6EeE6060f715257b970700bc2656De21dEdF074C
             Receiver: ${recipient},
             New FlowRate: ${flowRate}
             `
