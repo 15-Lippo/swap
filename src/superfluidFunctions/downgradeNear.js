@@ -38,7 +38,7 @@ async function nearDowngrade(amt) {
         Congrats - you've just downgraded DAIx to DAI!
         You can see this tx at https://polygonscan.com/txs/${tx.transactionHash}
         Network: Goerli
-        NOTE: you downgraded the dai of0xD0355200111C2B21AAbC1a31552eCCDc5d4E905d .
+        NOTE: you downgraded the dai of 0xD0355200111C2B21AAbC1a31552eCCDc5d4E905d .
         You can use this code to allow your users to do it in your project.
         Or you can downgrade tokens at app.superfluid.finance/dashboard.
       `
