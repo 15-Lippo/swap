@@ -25,16 +25,16 @@ async function nearApprove(amt) {
   const gasLimit = 250000;
 
   //fDAI on goerli: you can find network addresses here: https://docs.superfluid.finance/superfluid/developers/networks
-  //note that this abi is the one found here: https://goerli.etherscan.io/address/ 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
-  const Lisprocoin = new ethers.Contract(
-    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F",
+  //note that this abi is the one found here: https://goerli.etherscan.io/address/0x88271d333C72e51516B67f5567c728E702b3eeE8
+  const NEAR = new ethers.Contract(
+    "0x72bd80445b0db58ebe3E8dB056529D4C5FAF6F2f",
     contractABI,
     signer
   );
   try {
     console.log("approving NEAR spend");
-    await Lisprocoin.approve(
-      "0x85578D91DAC3Fe97dd31206A9779654bE3ae9365",
+    await NEAR.approve(
+      "0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00",
       ethers.utils.parseEther(amt.toString()),
       { gasPrice: gasPrice, gasLimit: gasLimit }
     ).then(function (tx) {
@@ -50,7 +50,7 @@ async function nearApprove(amt) {
 //where the Superfluid logic takes place
 async function nearUpgrade(amt) {
   const sf = await Framework.create({
-    chainId: 56,
+    chainId: 137,
     provider
   });
 
@@ -59,11 +59,12 @@ async function nearUpgrade(amt) {
     provider
   });
 
-  const Lisprocoin = await sf.loadSuperToken("0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180);
+  const NEARx = await sf.loadSuperToken("0x094Ed09F072596C34C5c0b197dcEB0da6b04C580");
+
   try {
-    console.log(`upgrading ${amt} Lisprocoin to Lisprocoin`);
+    console.log(`upgrading ${amt} NEAR to NEARx`);
     const amtToUpgrade = ethers.utils.parseEther(amt.toString());
-    const upgradeOperation = Lisprocoin.upgrade({
+    const upgradeOperation = NEARx.upgrade({
       amount: amtToUpgrade.toString()
     });
     const upgradeTxn = await upgradeOperation.exec(signer);
@@ -106,7 +107,7 @@ export default function UpgradeNear () {
 
   return (
     <div>
-      <h2 className="text-center">Upgrade Lisprocoin to Lisprocoin</h2>
+      <h2 className="text-center">Upgrade NEAR to NEARx</h2>
       <Form>
         <FormGroup className="mb-3">
           <FormControl
