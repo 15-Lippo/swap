@@ -35,7 +35,7 @@ export default async function updateExistingFlow(recipient, flowRate) {
             View Your Stream At: https://app.superfluid.finance/dashboard/${recipient}
             Network: Kovan
             Super Token: Lisprocoin
-            Sender: 0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180F
+            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
             Receiver: ${recipient},
             New FlowRate: ${flowRate}
             `
