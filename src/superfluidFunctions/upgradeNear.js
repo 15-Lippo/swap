@@ -25,7 +25,7 @@ async function nearApprove(amt) {
   const gasLimit = 250000;
 
   //fDAI on goerli: you can find network addresses here: https://docs.superfluid.finance/superfluid/developers/networks
-  //note that this abi is the one found here: https://goerli.etherscan.io/address/ 0x85578d91dac3fe97dd31206a9779654be3ae9365
+  //note that this abi is the one found here: https://goerli.etherscan.io/address/ 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
   const Lisprocoin = new ethers.Contract(
     "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F",
     contractABI,
