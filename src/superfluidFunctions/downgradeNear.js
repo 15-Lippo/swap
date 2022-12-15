@@ -19,8 +19,8 @@ async function nearDowngrade(amt) {
     provider
   });
 
-  const lisprocoin = await sf.loadSuperToken(
-    "0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F"
+  const NEARx = await sf.loadSuperToken(
+    "0x094Ed09F072596C34C5c0b197dcEB0da6b04C580"
   );
 
   console.log(DAIx.address);
@@ -28,7 +28,7 @@ async function nearDowngrade(amt) {
   try {
     console.log(`Downgrading ${amt} NEARx...`);
     const amtToDowngrade = ethers.utils.parseEther(amt.toString());
-    const downgradeOperation = Lisprocoin.downgrade({
+    const downgradeOperation = NEARx.downgrade({
       amount: amtToDowngrade.toString()
     });
     const downgradeTxn = await downgradeOperation.exec(signer);
@@ -38,7 +38,7 @@ async function nearDowngrade(amt) {
         Congrats - you've just downgraded DAIx to DAI!
         You can see this tx at https://polygonscan.com/txs/${tx.transactionHash}
         Network: Goerli
-        NOTE: you downgraded the dai of 0xD0355200111C2B21AAbC1a31552eCCDc5d4E905d .
+        NOTE: you downgraded the dai of 0xDCB45e4f6762C3D7C61a00e96Fb94ADb7Cf27721.
         You can use this code to allow your users to do it in your project.
         Or you can downgrade tokens at app.superfluid.finance/dashboard.
       `
