@@ -15,14 +15,14 @@ export default async function createNewFlow(recipient, flowRate) {
         provider: provider,
     });
 
-    const Lisprocoin contrac = await superfluid.loadSuperToken("");
-    const Lisprocoin = lisprocoin contract.address;
+    const NEARxContract = await superfluid.loadSuperToken("0x094Ed09F072596C34C5c0b197dcEB0da6b04C580");
+    const NEARx = NEARxContract.address;
 
     try {
         const createFlowOperation = superfluid.cfaV1.createFlow({
             receiver: recipient,
             flowRate: flowRate,
-            superToken: Lisprocoin,
+            superToken: NEARx,
         });
 
         console.log("Creating your stream...");
@@ -33,8 +33,8 @@ export default async function createNewFlow(recipient, flowRate) {
             `Congrats - you've just created a money stream!
             View Your Stream At: https://app.superfluid.finance/dashboard/${recipient}
             Network: Polygon
-            Super Token:Lisprocoin
-            Sender: 0x2776cAFe6dcAeB292A013Cb03e3aB332DAa52e8F
+            Super Token: NEARx
+            Sender: 0x6EeE6060f715257b970700bc2656De21dEdF074C
             Receiver: ${recipient},
             FlowRate: ${flowRate}
             `
